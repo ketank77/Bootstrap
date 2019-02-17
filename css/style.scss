@@ -47,6 +47,9 @@ body{
      background-color: $background-dark;
 }
 
+#loginbutton{
+    color:floralwhite;
+}
 .tab-content {
     border-left: 1px solid $lt-gray;
     border-right: 1px solid $lt-gray;
@@ -72,4 +75,17 @@ body{
     right:0px;
     position: absolute;
     bottom: 0px;
+}
+
+.modal {
+    .modal-header{
+        background:$background-dark;
+        color:floralwhite;
+        .close{
+            color:floralwhite;
+            }
+        } 
+    .modal-body {
+        background:$background-pale;
+        }
 }

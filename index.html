@@ -29,8 +29,9 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
-                <span class="navbar-text">
-                        <a data-toggle="modal" data-target="#loginModal">
+                <span class="navbar-text" id="loginbutton">
+<!--As now we will be using the Javascript code to trigger the button so all the data-* attributes to be removed and taken care by scripts
+                        <a data-toggle="modal" data-target="#loginModal">  -->
                         <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>                
@@ -135,11 +136,12 @@
                                                 </div>
                                         </div> 
                                         <div class="form-group row">
-                                                <div class="offset-sm-2">
+                                                <label for="nblank" class="col-sm-2 col-form-label"></label>                                             
+                                               <div class="col-sm-auto">
                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                                 </div>                                            
-                                                <div class="ml-1">
-                                                    <button type="submit" class="btn btn-primary">Reserve</button>
+                                                <div class="col-sm-auto">
+                                                    <button type="submit" class="btn btn-primary">Reserve</button> 
                                                 </div>
                                         </div>                                                                               
                                 </form>
@@ -158,7 +160,10 @@
                         <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                        <a class="btn btn-warning btn-sm btn-block" data-toggle="modal" data-target="#reserveModal">Reserve Table</a> 
+                        <a class="btn btn-warning btn-sm btn-block" id="reservetablebutton">
+<!--As now we will be using the Javascript code to trigger the button so all the data-* attributes to be removed and taken care by scripts                            
+                         data-toggle="modal" data-target="#reserveModal"> -->
+                         Reserve Table</a> 
                         
                             <!--- THIS needed to be added along with the above btn class as now the btn being used a modal
                             <a href="#reserveModal" class="btn btn-warning btn-sm btn-block"    
@@ -411,6 +416,12 @@
                     $("#carouselButton").children("span").removeClass('fa-play');
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
+            });
+            $("#reservetablebutton").click(function(){
+                $("#reserveModal").modal()
+            });
+            $("#loginbutton").click(function(){
+                $("#loginModal").modal()
             });           
         })
     </script>
